@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title> Abacus Quiz </title>
+<link href="style.css" rel="stylesheet">
+    <script src="sw.js"></script>
+</head>
+<body>
+
+
+<form action="/action_page.php">
+  <div class="container">
+
+    <h1>Title</h1>
+
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="level">Level:</label>
+  <select id="level" name="level">
+  <option value="level1">level1</option>
+  <option value="level2">level2</option>
+  <option value="level3">level3</option>
+  <option value="level4">level4</option>
+  <option value="level5">level5</option>
+  <option value="level6">level6</option>
+  <option value="level7">level7</option>
+  <option value="level8">level8</option>
+</select>
+<hr> 
+<div id="stopwatch">
+      <!-- [DISPLAY TIMER] -->
+      <div id="sw-time">03:00</div>
+      <!-- [RESET BUTTON] 
+      <input type="button" value="Reset" id="sw-rst" disabled/>-->
+      <!-- [START/STOP BUTTON] -->
+      <input type="button" value="Start Quiz" id="sw-go" onclick="show1();" disabled/>
+    </div>
+<br>
+<!--Question1-->
+
+<h1>Quesion 1</h1>
+<label class="quiz">Answer1
+  <input type="radio" checked="checked" name="q1">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q1">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q1">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q1">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question2-->
+<h1>Quesion 2</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q2">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q2">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q2">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q2">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question3-->
+<h1>Quesion 3</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q3">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q3">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q3">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q3">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question4-->
+<h1>Quesion 4</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q4">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q4">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q4">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q4">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question5-->
+<h1>Quesion 5</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q5">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q5">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q5">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q5">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question6-->
+<h1>Quesion 6</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q6">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q6">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q6">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q6">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question7-->
+<h1>Quesion 7</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q7">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q7">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q7">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q7">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question8-->
+<h1>Quesion 8</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q8">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q8">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q8">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q8">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question9-->
+<h1>Quesion 9</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q9">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q9">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q9">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q9">
+  <span class="checkmark"></span>
+</label> 
+
+<!--Question10-->
+<h1>Quesion 10</h1>
+<label class="quiz">Answer1
+  <input type="radio"  name="q10">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer2
+  <input type="radio" name="q10">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer3
+  <input type="radio" name="q10">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">Answer4
+  <input type="radio" name="q10">
+  <span class="checkmark"></span>
+</label> 
+<br> 
+<button id="submit" type="submit">Submit </button>
+</div>
+</form>
+
+
+</body>
+</html>
