@@ -3,21 +3,22 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Abacus Quiz </title>
-<link href="style.css" rel="stylesheet">
-    <script src="sw.js"></script>
+<link href="./static/styles.css" rel="stylesheet">
+    <script src="./static/timer.js"></script>
 </head>
 <body>
 
 
 
-<form action="/action_page.php">
+<form action="/submit" method="POST">
   <div class="container">
   
-    <h2>Title</h2>
+    <h1> <img src="../static/tlhlogo.png" alt="logo" style="float:right;width:166px;height:90px;">Abacus Quiz </h1
+    <br>
     <label for="email"><b>Name</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="level">Level:</label>
+    <label for="level"><b>Level:</b></label>
   <select id="level" name="level">
   <option value="level1">level1</option>
   <option value="level2">level2</option>
@@ -31,203 +32,266 @@
 <hr> 
 <div id="stopwatch">
       <!-- [DISPLAY TIMER] -->
-      <div id="sw-time">Time left: 03:00</div>
-      <!-- [RESET BUTTON] 
-      <input type="button" value="Reset" id="sw-rst" disabled/>-->
+      <!--<div id="sw-time">Time left: 03:00</div>-->
+      <input type="text" value="Time: 00:00" id="sw-time" name="time" />
+      
       <!-- [START/STOP BUTTON] -->
       <input type="button" value="Start Quiz" id="sw-go" onclick="show1();" disabled/>
     </div>
+    
 <br>
+
 <!--Question1-->
 <div id="questions">
-<h1>Quesion 1</h1>
-<label class="quiz">Answer1
-  <input type="radio" checked="checked" name="q1">
+<h1>1)  5 + 3 +9</h1>
+<label class="quiz">15  
+  <input type="radio" checked="checked" name="q1" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q1">
+<label class="quiz">16
+  <input type="radio" name="q1" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q1">
+<label class="quiz">17
+  <input type="radio" name="q1" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q1">
+<label class="quiz">19
+  <input type="radio" name="q1" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q1" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question2-->
-<h1>Quesion 2</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q2">
+<h1>2) 36 + 87 + 90</h1>
+<label class="quiz">213
+  <input type="radio"  name="q2" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q2">
+<label class="quiz">222
+  <input type="radio" name="q2" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q2">
+<label class="quiz">203
+  <input type="radio" name="q2" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q2">
+<label class="quiz">212
+  <input type="radio" name="q2" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q2" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question3-->
-<h1>Quesion 3</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q3">
+<h1>3) 66 + 55 + 77</h1>
+<label class="quiz">200
+  <input type="radio"  name="q3" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q3">
+<label class="quiz">199
+  <input type="radio" name="q3" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q3">
+<label class="quiz">197
+  <input type="radio" name="q3" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q3">
+<label class="quiz">198
+  <input type="radio" name="q3" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q3" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question4-->
-<h1>Quesion 4</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q4">
+<h1>4) 52 - 40 + 33</h1>
+<label class="quiz">45
+  <input type="radio"  name="q4" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q4">
+<label class="quiz">48
+  <input type="radio" name="q4" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q4">
+<label class="quiz">42
+  <input type="radio" name="q4" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q4">
+<label class="quiz">55
+  <input type="radio" name="q4" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q4" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question5-->
-<h1>Quesion 5</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q5">
+<h1>5) 25 + 25 + 33 - 25</h1>
+<label class="quiz">57
+  <input type="radio"  name="q5" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q5">
+<label class="quiz">58
+  <input type="radio" name="q5" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q5">
+<label class="quiz">68
+  <input type="radio" name="q5" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q5">
+<label class="quiz">59
+  <input type="radio" name="q5" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q5" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question6-->
-<h1>Quesion 6</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q6">
+<h1>6) 36 -12 +72 - 48</h1>
+<label class="quiz">50
+  <input type="radio"  name="q6" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q6">
+<label class="quiz">38
+  <input type="radio" name="q6" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q6">
+<label class="quiz">58
+  <input type="radio" name="q6" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q6">
+<label class="quiz">48
+  <input type="radio" name="q6" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q6" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question7-->
-<h1>Quesion 7</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q7">
+<h1>7) 50 + 50 + 50 - 25</h1>
+<label class="quiz">125
+  <input type="radio"  name="q7" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q7">
+<label class="quiz">135
+  <input type="radio" name="q7" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q7">
+<label class="quiz">115
+  <input type="radio" name="q7" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q7">
+<label class="quiz">145
+  <input type="radio" name="q7" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q7" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question8-->
-<h1>Quesion 8</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q8">
+<h1>8) 11 + 22 + 33 + 44</h1>
+<label class="quiz">120
+  <input type="radio"  name="q8" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q8">
+<label class="quiz">100
+  <input type="radio" name="q8" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q8">
+<label class="quiz">110
+  <input type="radio" name="q8" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q8">
+<label class="quiz">115
+  <input type="radio" name="q8" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q8" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question9-->
-<h1>Quesion 9</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q9">
+<h1>9) 78 - 38 + 30</h1>
+<label class="quiz">30
+  <input type="radio"  name="q9" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q9">
+<label class="quiz">70
+  <input type="radio" name="q9" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q9">
+<label class="quiz">60
+  <input type="radio" name="q9" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q9">
+<label class="quiz">80
+  <input type="radio" name="q9" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
 
+  <input type="radio" checked="checked" name="q9" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <!--Question10-->
-<h1>Quesion 10</h1>
-<label class="quiz">Answer1
-  <input type="radio"  name="q10">
+<h1>10) 100 + 150 + 315 - 222</h1>
+<label class="quiz">343
+  <input type="radio"  name="q10" value="a">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer2
-  <input type="radio" name="q10">
+<label class="quiz">345
+  <input type="radio" name="q10" value="b">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer3
-  <input type="radio" name="q10">
+<label class="quiz">341
+  <input type="radio" name="q10" value="c">
   <span class="checkmark"></span>
 </label>
-<label class="quiz">Answer4
-  <input type="radio" name="q10">
+<label class="quiz">353
+  <input type="radio" name="q10" value="d">
   <span class="checkmark"></span>
 </label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q10" value="e">
+
+  <span class="dummy"></span>
+
+</label>
 <br> 
  <input type="submit" value="Submit" class="btn" />
 </div>

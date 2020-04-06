@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
+import requests
 
 
 app = Flask(__name__)
 
-
-
+rightAnswers = ["c","a","d","a","b","d","a","c","b","a"]
+answers=["1","2","3","4","5","6","7","8","9","10"]
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -13,23 +14,31 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     if request.method == 'POST':
+        marks=0
         name = request.form['email']
-        level = request.form['levelr']
-        #rating = request.form['rating']
-        answer1 = request.form['q1']
-        answer2 = request.form['q2']
-        answer3 = request.form['q3']
-        answer4 = request.form['q4']
-        answer5 = request.form['q5']
-        answer6 = request.form['q6']
-        answer7 = request.form['q7']
-        answer8 = request.form['q8']
-        answer9 = request.form['q9']
-        answer10 = request.form['q10']
-        firstValue = name+ " " + level
-        secondValue = "timeTaken"
-        thirdValue = answer1 + "," + answer2 + ","+ answer3 + ","+ answer4 + ","+ answer4 + ","+ answer5 + ","+ answer6 + ","+ answer7 + ","+ answer8 + ","+ answer9 + ","+ answer10
+        level = request.form['level']
+        timeTaken = request.form['time']
+        answers[0] = request.form['q1']
+        answers[1] = request.form['q2']
+        answers[2] = request.form['q3']
+        answers[3] = request.form['q4']
+        answers[4] = request.form['q5']
+        answers[5] = request.form['q6']
+        answers[6] = request.form['q7']
+        answers[7] = request.form['q8']
+        answers[8] = request.form['q9']
+        answers[9] = request.form['q10']
+        print(answers)
+        for i in range(10):
+            if answers[i]==rightAnswers[i]:
+                marks=marks+5
+        firstValue = name+ "-" + level
+        secondValue = timeTaken
+        fourthValue = answers[0] + "," + answers[1] + ","+ answers[2] + ","+ answers[3] + ","+ answers[4] + ","+ answers[5] + ","+ answers[6] + ","+ answers[7] + ","+ answers[8] + ","+ answers[9]
+        thirdValue = str(marks) + " ["+ fourthValue +"]"
+        print("trigger ifttt")
         email_alert(firstValue, secondValue, thirdValue)
+        marks=0
         # print(customer, dealer, rating, comments)
         #if customer == '' or dealer == '':
             #return render_template('index.html', message='Please enter required fields')
@@ -47,10 +56,9 @@ def email_alert(first, second, third):
     report["value1"] = first
     report["value2"] = second
     report["value3"] = third
-    requests.post("https://maker.ifttt.com/trigger/YourEventName/with/key\
-    /iYiYhj3KyPFEwyVRuJzEb", data=report)    
+    requests.post("https://maker.ifttt.com/trigger/quiz_results/with/key/iYiYhj3KyPFEwyVRuJzEb", data=report)    
     print(first)
     print(second)
     print(third)
 if __name__ == '__main__':
-    app.run()
+    app.run(port='8000')

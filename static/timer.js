@@ -28,25 +28,29 @@ var sw = {
   /* [ACTIONS] */
   tick : function () {
   // tick() : update display if stopwatch running
-
+    //var timeStop=false;
     // Calculate hours, mins, seconds
     sw.now++;
     var remain = sw.now;
-    var timeLeft = 180-remain;
-    
+    //var timeLeft = 180-remain;
+    //if(remain > 180){mins = 0; secs = 0;timeStop=true}
     //var hours = Math.floor(remain / 3600);
     //remain -= hours * 3600;
-    var mins = Math.floor(timeLeft / 60);
-    timeLeft -= mins * 60;
-    if(timeLeft == 0){mins = 0; secs = 0;}
-    var secs = timeLeft;
+    //if(timeStop === false){
+      var mins = Math.floor(remain/ 60);
+      remain -= mins * 60;
+      //if(remain == 180){mins = 0; secs = 0;}
+      var secs = remain;
+    //}
+    
     mins = "0" + mins; 
     // Update the display timer
     //if (hours<10) { hours = "0" + hours; }
     //if (mins<10) { mins = "0" + mins; }
     if (secs<10) { secs = "0" + secs; }
+    document.getElementById("sw-time").value = "Time: " + mins + ":" + secs;
+    //sw.etime.innerHTML =  "Time left: " + mins + ":" + secs;
 
-    sw.etime.innerHTML =  "Time left: " + mins + ":" + secs;
   },
 
   start : function () {
@@ -86,3 +90,4 @@ document.getElementById('questions').style.display ='block';
 document.getElementById('sw-go').style.display ='none';
 }
 window.addEventListener("load", sw.init);
+//done
