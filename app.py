@@ -24,7 +24,7 @@ def mover3():
 @app.route('/mover4')
 def mover4():
     return render_template('mover4.html')
-@apoute('/mover5')
+@app.route('/mover5')
 def mover5():
     return render_template('mover5.html')
 @app.route('/advance1')
