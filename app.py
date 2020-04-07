@@ -9,6 +9,36 @@ answers=["1","2","3","4","5","6","7","8","9","10"]
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/basic')
+def basic():
+    return render_template('basic.html')
+@app.route('/mover1')
+def mover1():
+    return render_template('mover1.html')
+@app.route('/mover2')
+def mover2():
+    return render_template('mover2.html')
+@app.route('/mover3')
+def mover3():
+    return render_template('mover3.html')
+@app.route('/mover4')
+def mover4():
+    return render_template('mover4.html')
+@apoute('/mover5')
+def mover5():
+    return render_template('mover5.html')
+@app.route('/advance1')
+def advance1():
+    return render_template('advance1.html')
+@app.route('/advance2')
+def advance2():
+    return render_template('advance2.html')
+@app.route('/grand1')
+def grand1():
+    return render_template('grand1.html')
+@app.route('/grand2')
+def grand2():
+    return render_template('grand2.html')
 
 
 @app.route('/submit', methods=['POST'])
