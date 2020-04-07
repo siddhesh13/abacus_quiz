@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-rightAnswers = ["c","a","d","a","b","d","a","c","b","a"]
+rightAnswers = ["d","b","a","c","b","d","b","c","a","b"]
 answers=["1","2","3","4","5","6","7","8","9","10"]
 @app.route('/')
 def index():
@@ -36,6 +36,35 @@ def advance2():
 @app.route('/grand1')
 def grand1():
     return render_template('grand1.html')
+
+@app.route('/basic_un')
+def basic1():
+    return render_template('basic1.html')
+@app.route('/mover_un')
+def mover11():
+    return render_template('mover11.html')
+@app.route('/mover_dos')
+def mover21():
+    return render_template('mover21.html')
+@app.route('/mover_tres')
+def mover31():
+    return render_template('mover31.html')
+@app.route('/mover_cuatro')
+def mover41():
+    return render_template('mover41.html')
+@app.route('/mover_cinco')
+def mover51():
+    return render_template('mover51.html')
+@app.route('/advance_un')
+def advance11():
+    return render_template('advance11.html')
+@app.route('/advance_dos')
+def advance21():
+    return render_template('advance21.html')
+@app.route('/grand_un')
+def grand11():
+    return render_template('grand11.html')
+
 @app.route('/grand2')
 def grand2():
     return render_template('grand2.html')
