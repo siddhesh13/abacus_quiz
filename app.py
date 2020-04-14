@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-rightAnswers = ["d","b","a","c","b","d","b","c","a","b"]
+rightAnswers = ["d","a","c","a","b","b","d","c","a","c"]
 answers=["1","2","3","4","5","6","7","8","9","10"]
 @app.route('/')
 def index():
@@ -68,6 +68,64 @@ def grand11():
 @app.route('/grand2')
 def grand2():
     return render_template('grand2.html')
+
+#14th apr
+@app.route('/basic_uno')
+def basic12():
+    return render_template('basic12.html')
+@app.route('/mover_uno')
+def mover12():
+    return render_template('mover12.html')
+@app.route('/mover_due')
+def mover22():
+    return render_template('mover22.html')
+@app.route('/mover_tre')
+def mover32():
+    return render_template('mover32.html')
+@app.route('/mover_quattro')
+def mover42():
+    return render_template('mover42.html')
+@app.route('/mover_cinque')
+def mover52():
+    return render_template('mover52.html')
+@app.route('/advance_uno')
+def advance12():
+    return render_template('advance12.html')
+@app.route('/advance_due')
+def advance22():
+    return render_template('advance22.html')
+@app.route('/grand_uno')
+def grand12():
+    return render_template('grand12.html')
+
+#15th Apr
+@app.route('/basic_ichi')
+def basic13():
+    return render_template('basic13.html')
+@app.route('/mover_ichi')
+def mover13():
+    return render_template('mover13.html')
+@app.route('/mover_ni')
+def mover23():
+    return render_template('mover23.html')
+@app.route('/mover_san')
+def mover33():
+    return render_template('mover33.html')
+@app.route('/mover_shi')
+def mover43():
+    return render_template('mover43.html')
+@app.route('/mover_go')
+def mover53():
+    return render_template('mover53.html')
+@app.route('/advance_ichi')
+def advance13():
+    return render_template('advance13.html')
+@app.route('/advance_ni')
+def advance23():
+    return render_template('advance23.html')
+@app.route('/grand_ichi')
+def grand13():
+    return render_template('grand13.html')
 
 
 @app.route('/submit', methods=['POST'])

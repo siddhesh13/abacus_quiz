@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Abacus Quiz </title>
+<link href="./static/stylesheet.css" rel="stylesheet">
+    <script src="./static/countdown.js"></script>
+</head>
+<body>
+
+
+
+<form action="/submit" method="POST">
+  <div class="container">
+  
+    <h1> <img src="../static/tlhlogo.png" alt="logo" style="float:right;width:166px;height:90px;">Abacus Quiz </h1
+    <br>
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter your name" name="email" required>
+<!--
+    <label for="level"><b>Level:</b></label>
+  <select id="level" name="level">
+  <option value="level1">Basic</option>
+  <option value="level2">Mover1</option>
+  <option value="level3">Mover2/Flyer1</option>
+  <option value="level4">Mover3/Flyer2</option>
+  <option value="level5">Mover4/Flyer3</option>
+  <option value="level6">Mover5/Flyer5</option>
+  <option value="level7">Advance1</option>
+  <option value="level8">Advance2</option>
+  <option value="level7">Grand1</option>
+  <option value="level8">Grand2</option>
+</select>
+-->
+
+    <label for="level"><b>Level:</b></label>
+  <select id="level" name="level">
+  <option value="Mover4" selected>Mover4</option>
+</select>
+<hr> 
+<div id="stopwatch">
+      <!-- [DISPLAY TIMER] -->
+      <!--<div id="sw-time">Time left: 03:00</div>-->
+      <input type="text" value="Time: 00:00" id="sw-time" name="time" />
+      
+      <!-- [START/STOP BUTTON] -->
+      <input type="button" value="Start Quiz" id="sw-go" onclick="show1();" disabled/>
+    </div>
+    
+<br>
+
+<!--Question1-->
+<div id="questions">
+<h1>1) 263 + 15 + 42 + 26</h1>
+<label class="quiz">348
+  <input type="radio" checked="checked" name="q1" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">347
+  <input type="radio" name="q1" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">336
+  <input type="radio" name="q1" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">346
+  <input type="radio" name="q1" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q1" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question2-->
+<h1>2) 48 + 23 + 36 + 152</h1>
+<label class="quiz">259
+  <input type="radio"  name="q2" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">258
+  <input type="radio" name="q2" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">256
+  <input type="radio" name="q2" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">257
+  <input type="radio" name="q2" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q2" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question3-->
+<h1>3) 32 + 14 + 36 + 154</h1>
+<label class="quiz">238
+  <input type="radio"  name="q3" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">239
+  <input type="radio" name="q3" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">236
+  <input type="radio" name="q3" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">237
+  <input type="radio" name="q3" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q3" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question4-->
+<h1>4) 263 + 12 + 154 + 21</h1>
+<label class="quiz">450
+  <input type="radio"  name="q4" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">550
+  <input type="radio" name="q4" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">460
+  <input type="radio" name="q4" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">448
+  <input type="radio" name="q4" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q4" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question5-->
+<h1>5) 41 + 35 + 120 + 40</h1>
+<label class="quiz">237
+  <input type="radio"  name="q5" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">236
+  <input type="radio" name="q5" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">238
+  <input type="radio" name="q5" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">239
+  <input type="radio" name="q5" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q5" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question6-->
+<h1>6) 110 + 45 + 25 + 136</h1>
+<label class="quiz">317
+  <input type="radio"  name="q6" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">316
+  <input type="radio" name="q6" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">319
+  <input type="radio" name="q6" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">318
+  <input type="radio" name="q6" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q6" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question7-->
+<<h1>7) 366 + 154 + 25 + 75</h1>
+<label class="quiz">720
+  <input type="radio"  name="q7" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">630
+  <input type="radio" name="q7" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">610
+  <input type="radio" name="q7" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">620
+  <input type="radio" name="q7" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q7" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question8-->
+<h1>8) 45 x 3</h1>
+<label class="quiz">145
+  <input type="radio"  name="q8" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">125
+  <input type="radio" name="q8" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">135
+  <input type="radio" name="q8" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">115
+  <input type="radio" name="q8" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q8" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question9-->
+<h1>9) 201 + 25 + 42 - 98</h1>
+<label class="quiz">170
+  <input type="radio"  name="q9" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">190
+  <input type="radio" name="q9" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">180
+  <input type="radio" name="q9" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">160
+  <input type="radio" name="q9" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q9" value="x">
+
+  <span class="dummy"></span>
+
+</label>
+<!--Question10-->
+<h1>10) 63 + 150 + 36 + 24</h1>
+<label class="quiz">271
+  <input type="radio"  name="q10" value="a">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">274
+  <input type="radio" name="q10" value="b">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">273
+  <input type="radio" name="q10" value="c">
+  <span class="checkmark"></span>
+</label>
+<label class="quiz">272
+  <input type="radio" name="q10" value="d">
+  <span class="checkmark"></span>
+</label> 
+<label class="quiz">
+
+  <input type="radio" checked="checked" name="q10" value="x">
+
+  <span class="dummy"></span>
+</label>
+<hr> 
+ <input type="submit" value="Submit" class="btn" />
+</div>
+</form>
+
+
+</body>
+</html>
